@@ -1,2 +1,2 @@
 all:
-	clang++ -Iinclude -Llib -o main main.cpp -lSDL2
+	clang++ main.cpp -Ilib/SDL2.framework/Headers/ -Flib/ -framework SDL2 -rpath ../lib/ -o bin/app
