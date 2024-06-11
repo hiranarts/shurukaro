@@ -1,0 +1,8 @@
+#include "platform.h"
+#include <SDL2/SDL.h>
+
+namespace platform {
+  SDL_Window* WINDOW;
+  SDL_Renderer* RENDERER;
+  
+}
