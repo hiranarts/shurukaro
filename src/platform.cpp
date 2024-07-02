@@ -1,7 +1,3 @@
-#include <SDL2/SDL.h>
-#include <SDL2_mixer/SDL_mixer.h>
-#include <stdlib.h>
-
 SDL_Window* WINDOW;
 SDL_Renderer* RENDERER;
 int SDLFLAGS = SDL_INIT_VIDEO;
@@ -17,6 +13,7 @@ unsigned int PIXELS = 240;
 unsigned int GAME_FRAME_RATE = 60;
 
 const char* data_path = "../data/";
+
 int platformInit(){
     //SDL init
     if( SDL_Init(SDLFLAGS) < 0 ){
@@ -66,7 +63,7 @@ int platformDestroy(){
   RENDERER = NULL;
   return 0;
 }
-/* a concat function for c style strings, this allocates memory */ 
+
 char* concat(const char* s1, const char* s2){
   printf("size allocation %lu\n", strlen(s1) + strlen(s2) + 1);
   char* result = (char*)calloc(1, strlen(s1) + strlen(s2) + 1);
@@ -75,7 +72,7 @@ char* concat(const char* s1, const char* s2){
   printf("memory allocated size %lu\n", strlen(result));
   return result;
 }
-/* This code loads a music file from the data path */
+
 Mix_Music* platformLoadMusic(const char* filepath){
   char* freeMe = concat(data_path, filepath);
   printf("Loading Track: %s",freeMe);
