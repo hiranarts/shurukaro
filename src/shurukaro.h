@@ -1,9 +1,9 @@
 #include <SDL2/SDL.h>
 #include <SDL2_Mixer/SDL_mixer.h>
 #define IMGUI_DEFINE_MATH_OPERATORS
-#include "imgui.h"
-#include "imgui_impl_sdl2.h"
-#include "imgui_impl_sdlrenderer2.h"
+#include "imgui/imgui.h"
+#include "imgui/imgui_impl_sdl2.h"
+#include "imgui/imgui_impl_sdlrenderer2.h"
 #include "pthread.h"
 #include <chrono>
 #include <thread>
